@@ -1,2 +1,2 @@
-rootProject.name = "TornadoLab1"
+rootProject.name = "TornadoFxQuiz"
 

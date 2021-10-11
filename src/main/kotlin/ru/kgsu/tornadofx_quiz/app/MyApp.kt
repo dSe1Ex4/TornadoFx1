@@ -1,4 +1,4 @@
-package ru.kgsu.tornadotest.app
+package ru.kgsu.tornadofx_quiz.app
 
 
 import tornadofx.launch

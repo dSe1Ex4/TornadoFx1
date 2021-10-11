@@ -1,4 +1,4 @@
-package view
+package ru.kgsu.tornadofx_quiz.ui.view
 
 import javafx.geometry.Pos
 import javafx.scene.text.Font
