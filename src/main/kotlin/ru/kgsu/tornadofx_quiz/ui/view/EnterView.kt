@@ -39,7 +39,7 @@ class EnterView : View() {
                     replaceWith(CreateQuestionView::class, ViewTransition.Slide(0.3.seconds, ViewTransition.Direction.LEFT))
                     currentStage?.apply {
                         width = 320.0
-                        height = 380.0
+                        height = 480.0
                     }
                 }
             }
@@ -61,10 +61,10 @@ class EnterView : View() {
                 minHeight = 50.0
                 minWidth = 80.0
                 action {
-                    replaceWith(CreateQuestionView::class, ViewTransition.Slide(0.8.seconds, ViewTransition.Direction.LEFT))
+                    replaceWith(TestView::class, ViewTransition.Slide(0.8.seconds, ViewTransition.Direction.LEFT))
                     currentStage?.apply {
-                        width = 320.0
-                        height = 280.0
+                        width = 380.0
+                        height = 360.0
                     }
                 }
 

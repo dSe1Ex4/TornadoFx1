@@ -18,23 +18,31 @@ class CreateQuestionView : View() {
         alignment = Pos.CENTER
         spacing = 4.0
 
-        toggleGroup.selectedToggleProperty().addListener(ChangeListener { observable, oldValue, newValue ->
-            if ((newValue as RadioButton).text == "Текстовый ответ"){
-
-            }
-        })
-
         vbox {
             radiobutton("Один правильный ответ", toggleGroup).isSelected = true
             radiobutton("Несколько правильных ответов", toggleGroup)
             radiobutton("Соответствия", toggleGroup)
             radiobutton("Текстовый ответ", toggleGroup)
+            maxWidth = 200.0
         }
 
-        textfield {
+        imageview("radiobatton.png") {
+            isPreserveRatio = false
+            fitHeight = 200.0
+            fitWidth = 250.0
+        }
+
+        val tf = textfield {
             isVisible = false
             minWidth = 150.0
         }
+
+        toggleGroup.selectedToggleProperty().addListener(ChangeListener { observable, oldValue, newValue ->
+            val rb = (newValue as RadioButton)
+
+            tf.isVisible = (rb.text == "Текстовый ответ")
+        })
+
         button("Настройка вопросов"){
             minHeight = 50.0
             minWidth = 100.0
@@ -54,7 +62,7 @@ class CreateQuestionView : View() {
             setMaxSize(30.0, 30.0)
         }
         button("Тестирование") {
-            style {
+            style{
                 fontWeight = FontWeight.EXTRA_BOLD
                 fontSize = 20.px
                 rotate = 0.deg
