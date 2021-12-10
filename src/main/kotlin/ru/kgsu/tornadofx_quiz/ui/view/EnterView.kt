@@ -47,6 +47,7 @@ class EnterView : View() {
                 setMaxSize(30.0, 30.0)
             }
             button("Тестирование") {
+                tooltip("Подсказка по тестированию")
                 style {
                     fontWeight = FontWeight.EXTRA_BOLD
                     fontSize = 20.px
